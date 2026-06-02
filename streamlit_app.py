@@ -475,34 +475,34 @@ def plotly_layout(P: dict, height: int = 380, title: str = "") -> dict:
 # FALLBACK DATA  (realistic — app never crashes)
 # ──────────────────────────────────────────────────────────────────────────────
 FALLBACK_DATA = [
-    ("South Sinai", "Frontier Governorates", 28.25, 33.58, 77.01, 6.45, 0.96, 29.58, 4.41, 35.15, 2.37, "A", 1),
-    ("Red Sea", "Frontier Governorates", 26.9, 33.83, 70.01, 6.45, 0.95, 30.29, 5.09, 36.96, 2.76, "B", 2),
+    ("Red Sea", "Frontier Governorates", 26.9, 33.83, 78.35, 6.34, 0.97, 30.15, 4.10, 42.67, 2.41, "A", 1),
+    ("South Sinai", "Frontier Governorates", 28.25, 33.58, 76.01, 6.28, 0.96, 27.58, 2.93, 35.13, 2.04, "A", 2),
     ("Aswan", "Upper Egypt", 24.09, 32.9, 69.84, 6.52, 0.98, 35.12, 3.17, 25.67, 3.34, "B", 3),
-    ("Luxor", "Upper Egypt", 25.69, 32.64, 69.21, 6.43, 0.97, 34.93, 2.92, 27.56, 3.17, "B", 4),
-    ("New Valley", "Frontier Governorates", 25.45, 30.55, 68.32, 6.36, 0.97, 31.92, 3.51, 30.15, 3.01, "B", 5),
-    ("Matrouh", "Frontier Governorates", 31.35, 27.24, 66.86, 6.13, 0.95, 26.65, 4.34, 52.82, 2.22, "B", 6),
-    ("Qena", "Upper Egypt", 26.16, 32.72, 64.93, 6.27, 0.96, 34.34, 3.03, 31.14, 3.29, "B", 7),
-    ("Sohag", "Upper Egypt", 26.56, 31.7, 63.85, 6.13, 0.96, 33.72, 3.19, 34.42, 3.18, "B", 8),
-    ("Asyut", "Upper Egypt", 27.18, 31.18, 62.01, 6.01, 0.95, 33.02, 3.23, 37.52, 3.09, "B", 9),
-    ("Minya", "Upper Egypt", 28.11, 30.75, 59.83, 5.92, 0.94, 32.18, 3.24, 40.75, 2.97, "C", 10),
-    ("Beni Suef", "Upper Egypt", 29.07, 31.1, 57.25, 5.81, 0.93, 31.16, 3.14, 44.53, 2.87, "C", 11),
-    ("Suez", "Delta and Canal", 29.97, 32.55, 55.08, 5.82, 0.93, 30.29, 5.22, 49.33, 3.15, "C", 12),
-    ("Fayoum", "Upper Egypt", 29.31, 30.84, 54.12, 5.68, 0.92, 30.75, 3.21, 47.92, 2.81, "C", 13),
-    ("North Sinai", "Frontier Governorates", 30.28, 33.62, 53.97, 5.76, 0.91, 28.32, 4.15, 54.18, 2.92, "C", 14),
-    ("Beheira", "Delta and Canal", 30.85, 30.34, 49.52, 5.51, 0.91, 26.96, 3.52, 60.18, 2.62, "C", 15),
-    ("Ismailia", "Delta and Canal", 30.6, 32.27, 48.33, 5.62, 0.91, 28.53, 3.82, 56.12, 3.18, "C", 16),
-    ("Giza", "Greatest Cairo", 30.01, 31.21, 46.91, 5.61, 0.91, 29.92, 3.25, 53.42, 3.12, "D", 17),
-    ("Sharqia", "Delta and Canal", 30.73, 31.72, 46.22, 5.58, 0.91, 28.84, 3.32, 57.18, 3.15, "D", 18),
-    ("Dakahlia", "Delta and Canal", 31.04, 31.38, 45.18, 5.51, 0.91, 28.12, 3.41, 60.52, 2.82, "D", 19),
-    ("Cairo", "Greatest Cairo", 30.04, 31.24, 44.52, 5.56, 0.91, 29.82, 3.18, 54.92, 3.42, "D", 20),
-    ("Qalyubia", "Greatest Cairo", 30.33, 31.22, 43.82, 5.54, 0.91, 29.52, 3.12, 56.18, 3.22, "D", 21),
-    ("Alexandria", "Alxendaria and North Coast", 31.2, 29.92, 38.49, 5.45, 0.9, 27.3, 3.26, 63.17, 2.59, "D", 22),
-    ("Monufia", "Delta and Canal", 30.6, 30.99, 43.12, 5.52, 0.9, 29.12, 3.05, 58.92, 2.92, "D", 23),
-    ("Gharbia", "Delta and Canal", 30.87, 31.04, 42.52, 5.5, 0.9, 28.82, 3.12, 60.12, 2.95, "D", 24),
-    ("Kafr El Sheikh", "Delta and Canal", 31.11, 30.94, 41.82, 5.48, 0.9, 27.82, 3.32, 62.42, 2.72, "D", 25),
-    ("Damietta", "Delta and Canal", 31.42, 31.81, 39.92, 5.46, 0.9, 27.12, 3.82, 65.82, 2.82, "D", 26),
-    ("Port Said", "Delta and Canal", 31.26, 32.3, 38.12, 5.49, 0.9, 27.52, 4.22, 64.12, 3.02, "D", 27),
-]
+    ("Luxor", "Upper Egypt", 25.69, 32.64, 67.74, 6.42, 0.98, 33.20, 3.01, 28.86, 3.31, "B", 4),
+    ("New Valley", "Frontier Governorates", 25.45, 30.55, 66.29, 6.48, 0.98, 30.77, 3.13, 31.67, 4.41, "B", 5),
+    ("Qena", "Upper Egypt", 26.16, 32.72, 65.18, 6.34, 0.97, 33.66, 2.83, 29.15, 3.12, "B", 6),
+    ("Asyut", "Upper Egypt", 27.18, 31.18, 63.31, 6.36, 0.97, 31.71, 3.00, 34.00, 3.78, "B", 7),
+    ("Suez", "Delta and Canal", 29.97, 32.55, 61.97, 6.13, 0.96, 28.65, 2.96, 53.90, 2.88, "B", 8),
+    ("Sohag", "Upper Egypt", 26.56, 31.7, 61.06, 6.38, 0.97, 32.78, 3.12, 30.42, 4.34, "B", 9),
+    ("North Sinai", "Frontier Governorates", 30.28, 33.62, 60.18, 6.02, 0.94, 27.45, 2.69, 59.29, 2.30, "B", 10),
+    ("Minya", "Upper Egypt", 28.11, 30.75, 57.99, 6.15, 0.97, 30.82, 3.04, 39.47, 3.70, "C", 11),
+    ("Fayoum", "Upper Egypt", 29.31, 30.84, 55.25, 6.02, 0.95, 29.90, 3.22, 48.79, 3.47, "C", 12),
+    ("Beni Suef", "Upper Egypt", 29.07, 31.1, 55.14, 6.06, 0.95, 30.25, 3.05, 42.78, 3.47, "C", 13),
+    ("Ismailia", "Delta and Canal", 30.6, 32.27, 49.80, 5.89, 0.93, 28.87, 2.82, 56.45, 2.90, "D", 14),
+    ("Beheira", "Delta and Canal", 30.85, 30.34, 47.33, 5.84, 0.93, 29.61, 2.93, 58.88, 3.03, "D", 15),
+    ("Port Said", "Delta and Canal", 31.26, 32.3, 46.14, 5.35, 0.90, 22.16, 4.35, 74.72, 2.47, "D", 26),
+    ("Monufia", "Delta and Canal", 30.6, 30.99, 45.05, 5.84, 0.93, 30.93, 2.66, 53.56, 3.03, "D", 17),
+    ("Damietta", "Delta and Canal", 31.42, 31.81, 42.42, 5.35, 0.89, 24.12, 4.23, 68.38, 2.37, "D", 18),
+    ("Matrouh", "Frontier Governorates", 31.35, 27.24, 40.00, 5.21, 0.86, 22.44, 4.60, 71.55, 2.03, "D", 19),
+    ("Gharbia", "Delta and Canal", 30.87, 31.04, 39.94, 5.71, 0.92, 30.38, 2.65, 57.63, 3.03, "D", 20),
+    ("Qalyubia", "Greatest Cairo", 30.33, 31.22, 39.76, 5.71, 0.92, 30.93, 2.66, 53.56, 3.03, "D", 21),
+    ("Alexandria", "Alxendaria and North Coast", 31.2, 29.92, 38.49, 5.45, 0.90, 27.30, 3.26, 63.17, 2.59, "D", 22),
+    ("Cairo", "Greatest Cairo", 30.04, 31.24, 38.01, 5.71, 0.92, 29.86, 2.86, 50.94, 3.71, "D", 23),
+    ("Giza", "Greatest Cairo", 30.01, 31.21, 38.01, 5.71, 0.92, 29.86, 2.86, 50.94, 3.71, "D", 23),
+    ("Sharqia", "Delta and Canal", 30.73, 31.72, 36.87, 5.71, 0.92, 30.74, 2.52, 53.41, 3.42, "D", 24),
+    ("Kafr El Sheikh", "Delta and Canal", 31.11, 30.94, 27.33, 5.42, 0.89, 30.38, 2.65, 57.63, 3.03, "D", 25),
+    ("Dakahlia", "Delta and Canal", 31.04, 31.38, 22.01, 5.35, 0.89, 30.38, 3.65, 57.63, 3.42, "D", 26),
+       ]
 
 FALLBACK_COLS = [
     "Governorate_Name","Region","Latitude","Longitude",
@@ -514,9 +514,9 @@ FALLBACK_COLS = [
 def _fallback_df() -> pd.DataFrame:
     df = pd.DataFrame(FALLBACK_DATA, columns=FALLBACK_COLS)
     df["investment_rec"] = df["solar_site_score"].apply(
-        lambda s: "Strongly Recommended" if s >= 80
-        else ("Recommended" if s >= 65
-        else ("Neutral" if s >= 55 else "Not Recommended"))
+        lambda s: "Strongly Recommended" if s >= 75
+        else ("Recommended" if s >= 60
+        else ("Neutral" if s >= 50 else "Not Recommended"))
     )
     return df
 
