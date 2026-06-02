@@ -3,15 +3,6 @@
 ║         SolarIQ Egypt  —  AI-Powered Solar Intelligence Platform             ║
 ║         Version 3.0  |  Azure SQL Ready  |  Dark/Light Mode                  ║
 ║                                                                              ║
-║  SETUP:                                                                      ║
-║    1. pip install -r requirements.txt                                        ║
-║    2. Create .streamlit/secrets.toml:                                        ║
-║         SQL_SERVER   = "solar-sql-server.database.windows.net"               ║
-║         SQL_DATABASE = "SolarIQ_DW"                                          ║
-║         SQL_USER     = "Sqladmin"                                            ║
-║         SQL_PASSWORD = "Project123"                                          ║
-║         OPENAI_API_KEY = "sk-..."   (optional – chatbot works without it)    ║
-║    3. streamlit run streamlit_app.py                                         ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """
 
@@ -53,11 +44,35 @@ def _secret(key: str, default: str = "") -> str:
         pass
     return os.getenv(key, default)
 
-SQL_SERVER   = _secret("SQL_SERVER",   "solar-sql-server.database.windows.net")
-SQL_DATABASE = _secret("SQL_DATABASE", "SolarIQ_DW")
-SQL_USER     = _secret("SQL_USER",     "Sqladmin")
-SQL_PASSWORD = _secret("SQL_PASSWORD", "Project123")
+SQL_SERVER   = _secret("SQL_SERVER")
+SQL_DATABASE = _secret("SQL_DATABASE")
+SQL_USER     = _secret("SQL_USER")
+SQL_PASSWORD = _secret("SQL_PASSWORD")
 OPENAI_KEY   = _secret("OPENAI_API_KEY", "")
+
+required_settings = [
+    SQL_SERVER,
+    SQL_DATABASE,
+    SQL_USER,
+    SQL_PASSWORD
+]
+
+if not all(required_settings):
+    st.error(
+        """
+        Database configuration is missing.
+
+        Please configure:
+
+        • SQL_SERVER
+        • SQL_DATABASE
+        • SQL_USER
+        • SQL_PASSWORD
+
+        in .streamlit/secrets.toml
+        """
+    )
+    st.stop()
 
 # ──────────────────────────────────────────────────────────────────────────────
 # THEME STATE  (dark / light toggle — persists in session)
