@@ -26,6 +26,33 @@ import plotly.graph_objects as go
 import os
 from datetime import datetime
 
+import pyodbc
+
+# دالة الاتصال بقاعدة البيانات الذكية
+def get_db_connection():
+    try:
+        # الكود بيحاول يقرأ من Secrets بتاعة السيرفر أولاً
+        server = st.secrets.get("SQL_SERVER", "solar-sql-server.database.windows.net")
+        database = st.secrets.get("SQL_DATABASE", "SolarIQ_DW")
+        username = st.secrets.get("SQL_USER", "Sqladmin")
+        password = st.secrets.get("SQL_PASSWORD", "Project123")
+        
+        # لـ Linux (Streamlit Cloud) بنستخدم Microsoft ODBC Driver 17 أو 18
+        # وللـ Windows بيشتغل تلقائياً
+        connection_string = (
+            f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+            f"SERVER={server};"
+            f"DATABASE={database};"
+            f"UID={username};"
+            f"PWD={password};"
+            "Encrypt=yes;"
+            "TrustServerCertificate=no;"
+            "Connection Timeout=30;"
+        )
+        return pyodbc.connect(connection_string)
+    except Exception as e:
+        st.error(f"❌ Database Connection Error: {e}")
+        return None
 # ──────────────────────────────────────────────────────────────────────────────
 # PAGE CONFIG  ←  MUST be first Streamlit call
 # ──────────────────────────────────────────────────────────────────────────────
