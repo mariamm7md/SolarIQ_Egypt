@@ -78,6 +78,13 @@ Transform environmental data into actionable insights that support sustainable d
 
 ## 👩‍💻 Developed By
 **KHALIHA ALA ALLAH**
-*ITI Power BI Graduation Project – 2026
-*Information Technology Institute (ITI) – Tanta Branch
+
+* ITI Power BI Graduation Project – 2026
+* Information Technology Institute (ITI) – Tanta Branch
+
+**Team Members**
+Horia Ahmed Abdelatief
+Mariam Mohamed Eltras
+Marwan Mahmoud Helmy Mahmoud
+Ziad Refaat Ahmed Abdelaty
 
