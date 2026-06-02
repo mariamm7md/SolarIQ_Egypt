@@ -83,8 +83,9 @@ Transform environmental data into actionable insights that support sustainable d
 * Information Technology Institute (ITI) – Tanta Branch
 
 **Team Members**
-Horia Ahmed Abdelatief
-Mariam Mohamed Eltras
-Marwan Mahmoud Helmy Mahmoud
-Ziad Refaat Ahmed Abdelaty
+
+* Horia Ahmed Abdelatief
+* Mariam Mohamed Eltras
+* Marwan Mahmoud Helmy Mahmoud
+* Ziad Refaat Ahmed Abdelaty
 
