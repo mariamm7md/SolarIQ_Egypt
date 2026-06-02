@@ -77,6 +77,7 @@ Power BI • SSRS • Streamlit
 Transform environmental data into actionable insights that support sustainable development and data-driven investment decisions in Egypt.
 
 ## 👩‍💻 Developed By
-KHALIHA ALA ALLAH
-ITI Graduation Project 2026**SolarIQ Egypt Team**
-ITI Graduation Project 2026
+**KHALIHA ALA ALLAH**
+ITI Power BI Graduation Project – 2026
+Information Technology Institute (ITI) – Tanta Branch
+
