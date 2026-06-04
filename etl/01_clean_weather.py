@@ -2,7 +2,7 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║   SolarIQ Egypt — Weather Data Cleaning (FINAL v3)               ║
 ║   File: weather_data.csv → data/silver/weather_clean.csv         ║
-║   Rows: ~443,772 | Governorates: 27 | Period: 2003–2024          ║
+║   Rows: ~21,6972 | Governorates: 27 | Period: 2003-2024          ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 KEY DECISIONS (WHY):
