@@ -45,7 +45,7 @@ def calculate_solar_site_score(
     #
     # WHY: The Solar Site Score represents the LONG-TERM AVERAGE
     # potential of each governorate. We aggregate across all years
-    # (1981–2025) to get stable, representative metrics that are
+    # (2003–2024) to get stable, representative metrics that are
     # not skewed by any single good or bad year.
     #
     logger.info("Aggregating weather to governorate level...")
