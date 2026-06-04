@@ -1,9 +1,9 @@
 """
 ╔══════════════════════════════════════════════════════════════════╗
-║   SolarIQ Egypt — Air Quality Cleaning (FINAL v3)               ║
-║   File: Egypt_Air_Quality_Final_Report.csv                      ║
-║         → data/silver/air_quality_clean.csv                     ║
-║   Rows: 216,972 | Governorates: 27 | Period: 2003–2024          ║
+║   SolarIQ Egypt — Air Quality Cleaning (FINAL v3)                ║
+║   File: Egypt_Air_Quality_Final_Report.csv                       ║
+║         → data/silver/air_quality_clean.csv                      ║
+║   Rows: 216,972 | Governorates: 27 | Period: 2003–2024           ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 IMPORTANT FINDINGS FROM DATA AUDIT:
