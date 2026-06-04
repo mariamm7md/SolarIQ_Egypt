@@ -11,7 +11,7 @@ KEY DECISIONS (WHY):
    it would corrupt ALL averages and charts in Power BI.
 
 2. date integer → datetime  : Power BI cannot filter/group on an
-   integer like 19810101. Must be real datetime.
+   integer like 20030101. Must be real datetime.
 
 3. PRECTOTCORR > 50 mm  : 30 records across 18 governorates on
    the SAME days match known storm events. These are NOT errors —
