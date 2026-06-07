@@ -43,11 +43,10 @@ def _secret(key: str, default: str = "") -> str:
         pass
     return os.getenv(key, default)
 
-SQL_SERVER   = _secret("SQL_SERVER")
-SQL_DATABASE = _secret("SQL_DATABASE")
-SQL_USER     = _secret("SQL_USER")
-SQL_PASSWORD = _secret("SQL_PASSWORD")
-OPENAI_KEY   = _secret("OPENAI_API_KEY", "")
+SQL_SERVER="solar-sql-server.database.windows.net"
+SQL_DATABASE="SolarIQ_DW"
+SQL_USER="Sqladmin"
+SQL_PASSWORD="Project123"
 
 required_settings = [
     SQL_SERVER,
