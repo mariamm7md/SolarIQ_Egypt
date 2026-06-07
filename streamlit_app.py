@@ -1,7 +1,7 @@
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║         SolarIQ Egypt  —  AI-Powered Solar Intelligence Platform             ║
-║         Version 3.0  |  Azure SQL Ready  |  Dark/Light Mode                  ║
+║          SolarIQ Egypt  —  AI-Powered Solar Intelligence Platform            ║
+║          Version 3.0  |  Azure SQL Ready  |  Dark/Light Mode                 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """
 
@@ -29,27 +29,18 @@ st.set_page_config(
 )
 
 # ──────────────────────────────────────────────────────────────────────────────
-# SECRETS  — reads from .streamlit/secrets.toml first, then .env, then default
+# AZURE SQL CREDENTIALS
 # ──────────────────────────────────────────────────────────────────────────────
-def _secret(key: str, default: str = "") -> str:
-    try:
-        return st.secrets[key]
-    except Exception:
-        pass
-    try:
-        from dotenv import load_dotenv
-        load_dotenv()
-    except Exception:
-        pass
-    return os.getenv(key, default)
+SQL_SERVER   = "solar-sql-server.database.windows.net"
+SQL_DATABASE = "SolarIQ_DW"
+SQL_USER     = "Sqladmin"
+SQL_PASSWORD = "Project123"
 
-SQL_SERVER   = _secret("SQL_SERVER",   "solar-sql-server.database.windows.net")
-SQL_DATABASE = _secret("SQL_DATABASE", "SolarIQ_DW")
-SQL_USER     = _secret("SQL_USER",     "Sqladmin")
-SQL_PASSWORD = _secret("SQL_PASSWORD", "Project123")
-OPENAI_KEY   = _secret("OPENAI_API_KEY", "")
-
-
+# OpenAI Key fallback logic preserved if needed for the chatbot
+try:
+    OPENAI_KEY = st.secrets.get("OPENAI_API_KEY", "")
+except Exception:
+    OPENAI_KEY = os.getenv("OPENAI_API_KEY", "")
 # ──────────────────────────────────────────────────────────────────────────────
 # THEME STATE  (dark / light toggle — persists in session)
 # ──────────────────────────────────────────────────────────────────────────────
